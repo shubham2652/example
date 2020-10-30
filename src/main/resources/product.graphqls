@@ -1,0 +1,20 @@
+type Mutation{
+    addProduct(productName:String!, sku:String!, category:String, availableQuantity:Int!, productPrice:Float!): Product!
+}
+
+type Query{
+    productByProductName(productName:String):Product
+    listByProductName(productName:String):[Product]
+}
+
+type Product{
+    productName:String!
+    sku:String!
+    category:String
+    availableQuantity:Int!
+    productPrice:Int!
+}
+
+schema {
+    query: Query
+}
